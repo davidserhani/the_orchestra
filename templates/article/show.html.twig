@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Read {{ title }}{% endblock %}
+{% block body %}
+{# comment #}
+<h1>{{ title }}</h1>
+
+<!-- start slipsum code -->
+<div>
+    <p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
+    <p>Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.</p>
+    <p>And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+</div>
+
+<h2>Comments {{ comments|length }}</h2>
+
+<ul>
+    {% for comment in comments %}
+        <li>{{ comment }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
